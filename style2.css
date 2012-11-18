@@ -1,0 +1,51 @@
+/* Global  */
+* {
+	margin:0;
+	padding:0;
+}
+a, a:hover, a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+/* index.php */
+#wrapper {
+    width: 800px;
+    margin: 0 auto;
+}
+#top {
+    text-align: center;
+    margin: 50px 0;
+    border-bottom: 1px solid #B8B8B8;
+}
+#top h1 {
+    font-size: 76px;
+    font-family: BrandonGrotesque-Bold, Futura, Verdana, serif;
+    text-transform: uppercase; // 대문자로
+    font-weight: bold;
+}
+
+#middle {
+}
+#middle a {
+    color: #0099FF;
+    text-decoration: none;
+}
+#middle a:hover {
+    text-decoration: underline;
+}
+#old_bible, #new_bible, #recent {
+    float: left;
+    width: 260px;    
+}
+#middle h3 {
+    margin-bottom: 10px;
+}
+#middle li {
+	list-style-type: none;
+	height: 1.5em;
+}
+#footer {
+    clear: left;
+    height: 50px;
+}

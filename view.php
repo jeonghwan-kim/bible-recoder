@@ -7,7 +7,7 @@
 // ============================================================================= 
 	require_once('htmlAuth.php');
 	require_once('functions.php');
-	
+
 	/* 해당 성경 총 장수 출력 */
 	function showTotalChapters($title) {
 		$total_verse;
@@ -32,14 +32,14 @@
 					echo "<td><a href=view.php?title=$title&chapter=$i>" . $i . 
 						 "장</a></td>";
 				}
-				
+
 				if ( ($i % 10) == 0 ) echo '</tr>';
 			}
 			echo '</table></div>';
 			mysqli_close($dbc);
 		}		
 	}
-	
+
 	/* 성경 해당 장 본문 출력 */
 	function showText($title, $chapter) {
 		$query = "SELECT * FROM bible_contents " .
@@ -61,18 +61,14 @@
 				echo '<div id="verse">' . $verse . '.' . '</div>' .
 				'<div id="contents">'. $contents . '</div>';
 			}
-			
-			/* 추가 코드 2011.11.23 */
-			echo '<object width="600" height="400" ><param name="allowfullscreen" value="true" /><param name="movie" value="http://www.facebook.com/v/283252001714228" /><embed src="http://www.facebook.com/v/283252001714228" type="application/x-shockwave-flash" allowfullscreen="true" width="600" height="400"></embed></object>';
-			echo '<br /><a href="http://www.facebook.com/jeonghwan.kim1">아들의 페이스북(facebook) 방문하기 (클릭) </a>';
-			/* 여기까지 */
-			
+
 			echo '</div>'; // end of right div
+
 		}
 	}
 
 	setHeadHtml('Bible', 'style.css');	
-	
+
 	/* 파라메터 가져오기  */
 	$title = $_GET['title']; // 제목
 	$chapter = $_GET['chapter']; // 장
@@ -80,23 +76,22 @@
 		echo "parameter error<br />";
 		exit();
 	}
-	
+
 	/* 상단 - 타이틀 출력 */
 	showTitle();
-	
+
 	/* 좌측 - 리스트 출력 */
-	showList($title);
-	
+// 	showList($tit÷ßle);
+
 	/* 우측 - 제목출력 (마태복음 1장) */
 	showTitleChapter($title, $chapter);
-	
+
 	/* 우측 - 성경의 총 장 출력 (1장, 2장, ... , 28장) */
 	showTotalChapters($title); 
-	
+
 	/* 우측 - 본문 출력 */
 	showText($title, $chapter);
-	
+
 	/* 하단 - 공백 */
 	showFooter();
 ?>	
-
