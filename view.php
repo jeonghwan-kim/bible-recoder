@@ -3,14 +3,14 @@
 <head>
     <title>Bible Recoder</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link rel="stylesheet" type="text/css" href="style2.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <script type="text/javascript">
     </script>
 </head>
 <body>
 <div id="wrapper">
     <div id="top">
-        <h1><a href="index2.php">Bible Recoder</a></h1>
+        <h1><a href="./">Bible Recoder</a></h1>
     </div>
     
     <div id="middle">
