@@ -46,7 +46,7 @@ a, a:hover, a:visited {
     margin-top: 30px;
     text-align: center;
 }
-#old_bible, #new_bible, #recent {
+#oldbible, #newbible, #recent {
     float: left;
     width: 260px;    
 }
